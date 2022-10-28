@@ -1,0 +1,25 @@
+export const images ={
+    user_1: require('./images/User1.png'),
+    user_2: require('./images/User2.png'),
+    user_3: require('./images/User3.png'),
+    user_4: require('./images/User4.png'),
+    user_5: require('./images/User5.png'),
+    user_6: require('./images/User6.png'),
+    user_7: require('./images/User7.png'),
+    user_8: require('./images/User8.png'),
+    user_9: require('./images/User9.png'),
+    user_10: require('./images/User10.png'),
+
+    checked: require('./images/checked.png'),
+    unCheck: require('./images/unChecked.png'),
+    add: require('./images/add.png'),
+    apple: require('./images/apple.png'),
+    samsung: require('./images/samsung.png'),
+    microsoft: require('./images/microsoft.png'),
+    instagram: require('./images/instagram.png'),
+    disney: require('./images/disney.png'),
+    facebook: require('./images/facebook.png'),
+    mcdonalds: require('./images/mcdonalds.png'),
+    loginIcon: require('./images/loginIcon.png'),
+    Actions: require('./images/Actions.png')
+}
