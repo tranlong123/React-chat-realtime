@@ -9,6 +9,8 @@ import { images } from '../../images';
 export default function Register({ navigation }) {
     const [iconSee, setIconSee] = useState('eye-off')
     const [seePass, setSeePass] = useState(true)
+    const [iconSeeRe, setIconSeeRe] = useState('eye-off')
+    const [seeRePass, setSeeRePass] = useState(true)
 
     const handleRegister = () => {
         navigation.navigate('RegisterNext')
@@ -51,7 +53,7 @@ export default function Register({ navigation }) {
             {/* <Text style={styles.messageCenter}>{message}</Text> */}
             <View style={styles.inputText}>
                 <TextInput
-                    secureTextEntry={seePass}
+                    secureTextEntry={seeRePass}
                     style={{
                         flex: 1,
                         paddingLeft: 0,
@@ -60,16 +62,16 @@ export default function Register({ navigation }) {
                 />
                 <TouchableOpacity
                     onPress={() => {
-                        if (seePass == false) {
-                            setIconSee('eye-off')
-                            setSeePass(true)
+                        if (seeRePass == false) {
+                            setIconSeeRe('eye-off')
+                            setSeeRePass(true)
                         } else {
-                            setIconSee('eye')
-                            setSeePass(false)
+                            setIconSeeRe('eye')
+                            setSeeRePass(false)
                         }
                     }}
                 >
-                    <Feather name={iconSee} size={24} color={colors.blueBottomTab} style={{ padding: 10 }} />
+                    <Feather name={iconSeeRe} size={24} color={colors.blueBottomTab} style={{ padding: 10 }} />
                 </TouchableOpacity>
             </View>
             <TouchableOpacity
