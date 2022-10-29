@@ -14,9 +14,9 @@ const Header = ({ navigation, heading, icon1, icon2 }) => {
             <View style={styles.leftContainer}>
                 <TouchableOpacity
 
-                    // onPress={() => {
-                    //     navigation.navigate('Login')
-                    // }}
+                    onPress={() => {
+                        navigation.navigate('UserInfo')
+                    }}
                 >
                     <Image source={images.user_1} style={styles.userImage} />
                 </TouchableOpacity>

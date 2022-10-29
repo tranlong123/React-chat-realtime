@@ -12,35 +12,58 @@ import { images } from '../../../images';
 export default function ChatInput({ navigation }) {
     return (
         <View style={styles.container}>
-
-
             <View style={styles.leftContainer}>
                 <TouchableOpacity
                     onPress={() => {
-                       
+
                     }}
                 >
-                    <Image source={images.Actions} style={styles.userImage}/>
+                    <Image source={images.Actions} style={styles.LeftIcon} />
                 </TouchableOpacity>
                 <TouchableOpacity
-                // onPress={() => {
-                //     navigation.navigate('Login')
-                // }}
+                    onPress={() => {
+
+                    }}
                 >
-                    <Image source={images.user_1} style={styles.userImage} />
+                    <Image source={images.Photo} style={styles.LeftIcon} />
                 </TouchableOpacity>
-                {/* <Text style={styles.text}>Thiện</Text> */}
+                <TouchableOpacity
+                    onPress={() => {
+
+                    }}
+                >
+                    <Image source={images.Gallery} style={styles.LeftIcon} />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+
+                    }}
+                >
+                    <Image source={images.Audio} style={styles.AudioIcon} />
+                </TouchableOpacity>
+            </View>
+            <View style={styles.InputTextContainer}>
+                <TextInput
+                    autoFocus={true}
+                    style={styles.InputText}
+                    placeholder="Nhắn tin"
+                />
+                <TouchableOpacity
+                    onPress={() => {
+
+                    }}
+                >
+                    <Image source={images.Emoji} style={styles.EmojiIcon} />
+                </TouchableOpacity>
             </View>
             <View style={styles.rightContainer}>
-                <View style={styles.rightIconContainer}>
-                    <FontAwesome name="phone" size={24} color={colors.blueBottomTab} />
-                </View>
-                <View style={styles.rightIconContainer}>
-                    <FontAwesome name="video-camera" size={24} color={colors.blueBottomTab} />
-                </View>
-                <View style={styles.rightIconContainer}>
-                    <AntDesign name="exclamationcircle" size={24} color={colors.blueBottomTab} />
-                </View>
+                <TouchableOpacity
+                    onPress={() => {
+
+                    }}
+                >
+                    <Image source={images.Like} style={styles.RightIcon} />
+                </TouchableOpacity>
             </View>
         </View>
     );

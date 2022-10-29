@@ -1,4 +1,4 @@
-import { StyleSheet,Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import { colors } from "../../../theme/color";
 
 const deviceWidth = Dimensions.get('screen').width
@@ -11,7 +11,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         position: 'absolute',
         bottom: 0,
-        backgroundColor: colors.white,
+        // backgroundColor: colors.gray02,
+        height: 50,
+        width: deviceWidth,
     },
     leftContainer: {
         display: 'flex',
@@ -19,38 +21,49 @@ export const styles = StyleSheet.create({
         padding: 10,
         alignItems: 'center',
     },
-    BackIcon: {
-        left:-5,
-        top: -1,
-        width: 36,
-        height: 36,
+    LeftIcon: {
+        width: 20,
+        height: 20,
+        marginRight: 15,
+    },
+    AudioIcon: {
+        height: 22,
+        width: 16,
+    },
+    InputTextContainer: {
+        backgroundColor: colors.gray02,
+        display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        borderRadius: 40,
+        width: deviceWidth * 0.55,
+        height: 38,
+        flexDirection: 'row',
+        bottom: -6,
     },
-    userImage: {
-        height: 36,
-        width: 36,
-        borderRadius: 50,
-        marginRight: 10,
-    },
-    text: {
+    InputText: {
         color: colors.black,
-        fontSize: 20,
+        fontSize: 17,
         fontWeight: '500',
-        lineHeight: 26,
+        lineHeight: 20,
+        paddingLeft: 15,
+        flex: 1,
+    },
+    EmojiIcon: {
+        padding: 10,
+        width: 25,
+        height: 25,
+        top: 6,
+        right: 8,
     },
     rightContainer: {
         display: 'flex',
-        flexDirection: 'row',
         padding: 10,
         alignItems: 'center',
+        right: 0,
     },
-    rightIconContainer: {
-        padding: 10,
-        marginLeft: 10,
-        width: 46,
-        height: 46,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
+    RightIcon: {
+        width: 25,
+        height: 25,
+        top:2,
+    },
 })

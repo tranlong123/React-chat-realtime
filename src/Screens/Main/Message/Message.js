@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import {  View } from 'react-native';
+import { View } from 'react-native';
 
 import { images } from '../../../images';
 
@@ -29,9 +29,9 @@ export default function Message({ navigation }) {
       <StatusBar hidden={true} />
 
       <View style={styles.container}>
-        <Header heading='Đoạn chat' icon1='camera' icon2='pencil' />
+        <Header navigation={navigation} heading='Đoạn chat' icon1='camera' icon2='pencil' />
         <SearchBox />
-        <StorySlider data={Data}/>
+        <StorySlider data={Data} />
         <UserList navigation={navigation} />
       </View>
     </>

@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.white,
         borderBottomColor: colors.gray,
         borderBottomWidth: 0.5,
+        // position:'absolute',
     },
     leftContainer: {
         display: 'flex',

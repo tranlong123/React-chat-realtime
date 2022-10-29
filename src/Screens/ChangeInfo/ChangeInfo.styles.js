@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-import { colors } from "../../../theme/color";
+import { colors } from "../../theme/color";
 const deviceWidth = Dimensions.get('screen').width
 
 export const styles = StyleSheet.create({
@@ -9,8 +9,19 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    iconStyle: {
-        top:'-4%',
+    HeaderContainer: {
+        position: 'absolute',
+        top: 10,
+        left: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    HeaderText:{
+        color: colors.black,
+        fontSize: 20,
+        marginLeft: 15,
+        fontFamily: 'sans-serif',
     },
     inputText: {
         width: deviceWidth * 0.8,
@@ -46,9 +57,10 @@ export const styles = StyleSheet.create({
         width: deviceWidth * 0.8,
         height: 50,
         flexDirection: 'row',
+        paddingLeft:5,
     },
     label1: {
-        marginRight:30,
+        marginRight: 30,
         top: 6,
         fontSize: 17,
         fontFamily: 'sans-serif',
@@ -57,7 +69,7 @@ export const styles = StyleSheet.create({
         top: 6,
         fontSize: 17,
         marginLeft: 20,
-        marginRight:5,
+        marginRight: 5,
         fontFamily: 'sans-serif',
     },
 });

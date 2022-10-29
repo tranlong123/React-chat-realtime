@@ -2,33 +2,39 @@ import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 
+import { Ionicons } from '@expo/vector-icons';
 
-import { styles } from "./RegisterNext.styles";
-import { colors } from '../../../theme/color';
-import { images } from '../../../images';
+import { styles } from "./ChangeInfo.styles";
+import { colors } from '../../theme/color';
 
-export default function RegisterNext({ navigation }) {
+export default function ChangeInfo({ navigation }) {
 
     const [checked, setChecked] = React.useState('first');
 
-    const handleRegisterNext = () => {
+    const handleChangeInfo = () => {
         navigation.navigate('Main')
     }
 
     return (
         <View style={styles.container}>
-            <View style={styles.iconStyle}>
-                <Image source={images.loginIcon} />
+            <View style={styles.HeaderContainer}>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.goBack()
+                    }}
+                >
+                    <Ionicons name="arrow-back" size={35} color={colors.black} />
+                </TouchableOpacity>
+                <Text style={styles.HeaderText}>Sửa thông tin</Text>
             </View>
             <TextInput
                 style={styles.inputText}
                 autoFocus={true}
-                placeholder="Tên người dùng"
+                placeholder="Tên người dùng: Trần Long"
             />
-            {/* <Text style={styles.messageCenter}>{message}</Text> */}
             <TextInput
                 style={styles.inputText}
-                placeholder="Ngày sinh    DD-MM-YYYY"
+                placeholder="Ngày sinh: 10-02-2000"
             />
 
             <View style={styles.genderContainer}>
@@ -48,24 +54,21 @@ export default function RegisterNext({ navigation }) {
             </View>
             <TextInput
                 style={styles.inputText}
-                placeholder="Số điện thoại"
+                placeholder="SĐT: 09****4929"
+            />
+            <TextInput
+                style={styles.inputText}
+                placeholder="Điền Mật khẩu"
             />
             <TouchableOpacity
                 onPress={() => {
-                    handleRegisterNext()
+                    handleChangeInfo()
                 }}
                 style={styles.ButtonStyle}
             >
-                <Text style={styles.ButtonText}>Đăng ký</Text>
+                <Text style={styles.ButtonText}>Thay đổi</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.ForgetLogin}
-                onPress={() => {
-                    navigation.navigate('Login')
-                }}
-            >
-                <Text style={styles.ForgetLogin}>Quay lại Đăng nhập</Text>
-            </TouchableOpacity>
+
         </View>
     );
 

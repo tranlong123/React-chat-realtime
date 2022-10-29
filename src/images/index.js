@@ -21,5 +21,10 @@ export const images ={
     facebook: require('./images/facebook.png'),
     mcdonalds: require('./images/mcdonalds.png'),
     loginIcon: require('./images/loginIcon.png'),
-    Actions: require('./images/Actions.png')
+    Actions: require('./images/Actions.png'),
+    Photo: require('./images/Photo.png'),
+    Gallery: require('./images/Gallery.png'),
+    Like: require('./images/Like.png'),
+    Emoji: require('./images/Emoji.png'),
+    Audio: require('./images/Audio.png'),
 }
