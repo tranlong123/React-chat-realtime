@@ -30,16 +30,6 @@ export default function UserList({ navigation }) {
     const renderHiddenItem = (data, rowMap) => (
         <View style={styles.rowBack}>
             <View style={styles.hiddenIconContainer}>
-                <View style={styles.hiddenItem}>
-                    <AntDesign name="camera" size={28} color={colors.blueBottomTab} />
-                </View>
-                <View style={styles.hiddenItem}>
-                    <FontAwesome name="phone" size={28} color={colors.blueBottomTab} />
-                </View>
-                <View style={styles.hiddenItem}>
-                    <FontAwesome5 name="video" size={28} color={colors.blueBottomTab} />
-                </View>
-
             </View>
             <View style={styles.hiddenIconContainer}>
                 <View style={styles.hiddenItem}>
@@ -70,7 +60,6 @@ export default function UserList({ navigation }) {
                             <Text style={styles.label1} >{item.name}</Text>
                             <Text style={styles.label2}>{item.lastMessage}</Text>
                         </View>
-                        <Image source={images.checked} style={styles.iconCheck} />
                     </View>
                 </TouchableOpacity>
 
@@ -83,7 +72,7 @@ export default function UserList({ navigation }) {
                 data={Data}
                 renderItem={renderItem}
                 renderHiddenItem={renderHiddenItem}
-                leftOpenValue={170}
+                leftOpenValue={0}
                 rightOpenValue={-150}
             />
         </View>

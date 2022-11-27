@@ -46,9 +46,9 @@ const Main = () => {
                 name="Call"
                 component={Call}
                 options={{
-                    tabBarLabel: 'Cuộc gọi',
+                    tabBarLabel: 'Nhóm chat',
                     tabBarIcon: ({ color }) => (
-                        <FontAwesome name="video-camera" size={24} color={color} />
+                        <FontAwesome name="group" size={24} color={color} />
                     ),
                 }}
             />

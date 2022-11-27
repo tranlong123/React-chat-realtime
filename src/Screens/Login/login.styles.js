@@ -38,6 +38,12 @@ export const styles = StyleSheet.create({
         color: colors.white,
         fontWeight: '400',
     },
+    messageCenter: {
+        textAlign: 'center',
+        color: '#fdcb6e',
+        fontSize: 15,
+        paddingBottom: 8,
+    },
     ForgetLogin: {
         color: colors.blueBottomTab,
         marginTop: 5,

@@ -24,7 +24,7 @@ const ProfileItem = ({ icon, name }) => (
 //     dispatch(logout())
 // }
 const handleLogout =() => {
-    navigation.navigate('Login')
+    navigation.navigate('Login ')
 }
 
 const UserInfo = ({ navigation }) => {
