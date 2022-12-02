@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "chatApp",
-    "slug": "chatApp",
+    "name": "Chat realtime mobile",
+    "slug": "chat-realtime-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.mailnophone03.chatrealtimemobile",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "184c4fed-c5e6-4fcb-91bf-fc6f782a9088"
+      }
     }
   }
 }
