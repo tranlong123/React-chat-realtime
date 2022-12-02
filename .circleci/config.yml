@@ -6,7 +6,6 @@ executors:
       - image: cimg/node:lts
     working_directory: ~/React-chat-realtime
     
-
 jobs:
   job_build:
     executor: default
@@ -14,16 +13,16 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: npm ci
-      - run:
-          name: Trigger build
           command: |
-            npx expo build:android -t apk
-            ls -la
+            sudo npm i -g expo eas-cli
+      - run:
+          name: Build android app
+          command: |
+            eas build -p android
 
 workflows:
   build_app:
     jobs:
       - job_build
-          
+
 
