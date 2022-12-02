@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Build android app
           command: |
-            eas build -p android
+            eas build -p android --non-interactive
 
 workflows:
   build_app:
