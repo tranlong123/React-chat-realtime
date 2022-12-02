@@ -1,0 +1,34 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: cimg/node:lts
+    working_directory: ~/React-chat-realtime
+    
+jobs:
+  job_build:
+    executor: default
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            sudo npm i -g expo eas-cli
+      - run:
+          name: Build android app
+          command: |
+            echo 'export EXPO_TOKEN=${EXPO_TOKEN}' >> "$BASH_ENV"
+            eas build -p android --non-interactive
+
+workflows:
+  build_app:
+    jobs:
+      - job_build:
+          filters:
+            branches:
+              only:
+                - develop
+                - main
+
+
